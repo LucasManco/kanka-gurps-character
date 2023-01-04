@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanka\Dnd5eMonster;
+namespace Kanka\GurpsCharacter;
 
 use Illuminate\Support\ServiceProvider;
 
