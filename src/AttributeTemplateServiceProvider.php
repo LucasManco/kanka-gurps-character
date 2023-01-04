@@ -13,29 +13,29 @@ class AttributeTemplateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dnd5emonster');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'gurpscharacter');
 
-        $this->loadTranslationsFrom(realpath(__DIR__.'/../publishable/lang'), 'dnd5emonster');
+        $this->loadTranslationsFrom(realpath(__DIR__.'/../publishable/lang'), 'gurpscharacter');
 
 
         // Assets
         $this->publishes([
-            __DIR__.'/../publishable/assets' => public_path('vendor/dnd5emonster'),
+            __DIR__.'/../publishable/assets' => public_path('vendor/gurpscharacter'),
         ], 'dnd5emonster');
 
         // Config
         $this->publishes([
-            __DIR__.'/../publishable/config/dnd5emonster.php' => config_path('dnd5emonster.php'),
+            __DIR__.'/../publishable/config/gurpscharacter.php' => config_path('gurpscharacter.php'),
         ]);
         $this->mergeConfigFrom(
-            __DIR__.'/../publishable/config/dnd5emonster.php', 'dnd5emonster'
+            __DIR__.'/../publishable/config/gurpscharacter.php', 'gurpscharacter'
         );
 
         // Translations
-        $this->loadTranslationsFrom(__DIR__.'/../publishable/lang', 'dnd5emonster');
+        $this->loadTranslationsFrom(__DIR__.'/../publishable/lang', 'gurpscharacter');
 
         $this->publishes([
-            __DIR__.'/../publishable/lang' => resource_path('lang/vendor/dnd5emonster'),
+            __DIR__.'/../publishable/lang' => resource_path('lang/vendor/gurpscharacter'),
         ]);
     }
 }
