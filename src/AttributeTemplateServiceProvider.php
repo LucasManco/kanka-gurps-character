@@ -21,7 +21,7 @@ class AttributeTemplateServiceProvider extends ServiceProvider
         // Assets
         $this->publishes([
             __DIR__.'/../publishable/assets' => public_path('vendor/gurpscharacter'),
-        ], 'dnd5emonster');
+        ], 'gurpscharacter');
 
         // Config
         $this->publishes([
